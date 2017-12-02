@@ -11,6 +11,10 @@ if [ "$#" -eq 0 ]; then
 fi
 
 filename="$1"
+#note that the conditional must be in []s, not ()s
+#Also, there must be interior whitespace in the [  ]s
+#i.e. if [ -e "$filename" ] IS ok
+#     if [-e "$filename"]   is NOT
 
 if [ -e "$filename" ]; then
  #the -e flag above is a command to check the existence of a file
