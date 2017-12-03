@@ -7,18 +7,24 @@ counter=3
 echo "Prepare for warp speed!"
 
 while [ $counter -gt 0 ] ; do
+	if [ "$1" = "jump" ] ;
+	 then #jump through the countdown loop
+		echo "Delay override, we go now!"
+		let counter=$counter-1
+		continue
+	fi
 	echo $counter
-	let counter=$counter-1
 	sleep 1
 done
 
 
 str=">>>"
 breakPoint=2
+distance=5
 
 echo -e "Engage! xD\n$str"
 
-until [ $counter -ge 5 ] ; do
+until [ $counter -ge $distance ] ; do
 	str=$str$str
 	echo $str
 	let counter=$counter+1
@@ -29,6 +35,11 @@ until [ $counter -ge 5 ] ; do
 		if [ $counter -le 3 ] ;
 		 then
 			echo "We found more gas! =)"
+			if [ $2 -ge 0 ];
+			 then
+				breakPoint=$breakPoint+$2
+				shift
+			fi
 			sleep 1
 			continue #go for another round in the loop
 		fi
