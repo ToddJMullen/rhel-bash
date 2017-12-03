@@ -12,7 +12,7 @@ fi
 
 echo "Count down sequence"
 sleep 2
-
+# if no var or list is given to for, it will fallback to user input args 
 for i in 6 5 4 3 2 1 "Time's up. Beginning reality check." ; do
 	echo -e "$i\n"
 	sleep 1
