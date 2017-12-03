@@ -2,9 +2,11 @@
 
 #for loops
 
-if [ "$#" -eq 0 ]#if there are 0 positional params
+if [ "$#" -eq 0 ] ;
+ then #if there are 0 positional params
 	echo -e "Error, you forgot to tell me a filename!"
-	echo -e "Usage: $(basename $0) <filename>\n" # Remember $0 is a ref to the current file name / path
+	echo -e "Usage: $(basename $0) <filename> <filename> <filename>\n"
+	# $0 => current file name ^^^ (path)
 	exit 1 #non-zero for error
 fi
 
