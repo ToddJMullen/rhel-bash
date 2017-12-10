@@ -17,3 +17,4 @@ echo -e "\n\nThis line has the same posiitional params/args from the CLI (after 
 echo "\$# hold the number of pos args: $#
 \$@ Holds all the current args as a list: $@
 \$* Has the current args as a single value: $*"
+\$? Holds the last error

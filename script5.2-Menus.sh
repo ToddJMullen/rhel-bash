@@ -34,15 +34,18 @@ select choice in $options; do
 	
 	case $choice in
 		"Item1")
-			echo -e "\nYou chose Item1!"
+			#echo -e "\nYou chose Item1!"
+			promptUser
 		break
 		;;
 		"Item2")
-			echo -e "\nYou chose #2"
+#			echo -e "\nYou chose #2"
+			promptUser
 		break
 		;;
 		"Option3")
 			echo -e "\nThat is #3"
+			
 		break
 		;;
 	esac

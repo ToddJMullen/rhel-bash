@@ -17,6 +17,7 @@ filename="$1"
 #     if [-e "$filename"]   is NOT
 
 if [ -e "$filename" ]; then
+echo "Input: '$filename'"
  #the -e flag above is a command to check the existence of a file
  #other flags checks are:
 # -e exists, -b Block device files, -c Char device files, -f Regular files
